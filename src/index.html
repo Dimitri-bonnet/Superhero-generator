@@ -3,12 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icone Font Awesome-->
+    <script src="https://kit.fontawesome.com/a13498b757.js" crossorigin="anonymous"></script>
+    <!-- POLICE -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <!-- CSS BOOSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>Test Declique</title>
 </head>
 <body>
-    <div class="container-header">
-            <h1>Hello word</h1>
+    <div class="myapp">
+        <!-- Header -->
+        <div class="container-fluid header">
+            <div class="row">
+                <div class="col-12">
+                    <div class=" py-5 text-center text-white">
+                        <h1 class="pb-2">Générateur de super-héros</h1>
+                        <button onclick="RandomHero(1, 200)"><i class="fas fa-mask mr-2"></i>Super héro aléatoire</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero card -->
+        <section class="hero">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-sm-8 col-md-5 col-lg-2">
+                        <div class="card my-2">
+                            <img class="card-img-top rounded-top img-fluid " src="https://www.superherodb.com/pictures2/portraits/10/100/1390.jpg" alt="ici l'image" style="height: 10rem; width: auto;">
+                                  <h5 class="card-title text-center p-4">Nom du super-hero</h5>
+                                      <div class="container-fluid  bg-dark rounded-bottom text-white">
+                                          <div class="row justify-content-between text-center">
+                                            <div class="col-12 col-md-6 ">
+                                                <p class="mt-2"><i class="fas fa-venus-mars"></i> Genre : ddddd</p>
+                                            </div>
+                                            <div class="col-12 col-md-6 ">
+                                                <p class="mt-2"><i class="fas fa-dna"></i> Race : dddd</p>
+                                                
+                                            </div>
+                                          </div>
+                                          <div class="row justify-content-start text-center">
+                                              <div class="col-12">
+                                                  <p class="mt-2"><i class="fas fa-magic"></i> Powerstats :</p>
+                                                  <ul>
+                                                      <li>1</li>
+                                                      <li>2</li>
+                                                      <li>3</li>
+                                                      <li>4</li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+                                      </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <!-- Footer -->
+        <div class="container-fluid footer">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="text-center text-white">
+                        <p class="pt-2">Techniques : Dimitri BONNET - 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+        <!-- <div class="container-header text-center ">
+            <div class="header-title">
+                <h1 class="text-white">Générateur de super-héros </h1>
+               
+            </div> 
+        </div> -->
+
+        <!-- <div class="container-main">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-10 col-md-8 col-lg-4 p-4">
+                            <div class="card">
+                                <img class="card-img-top " src="https://www.superherodb.com/pictures2/portraits/10/100/1390.jpg" alt="ici l'image" style="height: 10rem; width: auto;">
+                                  <h5 class="card-title text-center pt-3">Nom du super-hero</h5>
+                                      <div class="container-fluid  bg-dark rounded text-white">
+                                          <div class="row justify-content-between">
+                                            <div class="col-12 col-md-6">
+                                                <h6 class="mt-2"> <i class="fas fa-venus-mars"></i> Genre : ddddd</h6>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <h6 class="mt-2"><i class="fas fa-dna"></i> Race : dddd</h6>
+                                                
+                                            </div>
+                                          </div>
+                                          <div class="row justify-content-start">
+                                              <div class="col-12">
+                                                  <h6 class="mt-2"><i class="fas fa-magic"></i> Powerstats :</h6>
+                                                  <ul class="p-3">
+                                                      <li>dddd</li>
+                                                      <li>fff</li>
+                                                      <li>gggg</li>
+                                                      <li>gggg</li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+                                      </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                
+        </div>  -->
+        <!-- <div class="container-footer">
+            <div class="container-fluid">
+                <div class="col-12 text-center text-white pt-1">
+                    TEST TECHNIQUE : Dimitri Bonnet - 2020
+                </div>
+            </div>
+        </div>  -->
+  
+    <script>
+        function RandomHero(min, max) {
+            const randomNumber =  Math.floor(Math.random() * (max - min + 1)) + min;
+            const id = randomNumber;
+            console.log(id);
+            const reponse = fetch("https://superheroapi.com/api/2541564006094962/" + id);
+            reponse
+                .then(async res =>{
+                try{
+                    const hero = await res.json();
+                    console.log(hero);
+                } catch(e){
+                    console.log(e)
+                }
+            })
+            .catch(err => console.log(err));
+        } 
+    </script>
 </body>
 </html>
