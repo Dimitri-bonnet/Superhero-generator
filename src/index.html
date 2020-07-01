@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Animate CSS -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <!-- Icone Font Awesome-->
     <script src="https://kit.fontawesome.com/a13498b757.js" crossorigin="anonymous"></script>
     <!-- POLICE -->
@@ -20,7 +22,7 @@
                 <div class="col-12">
                     <div class=" py-5 text-center text-white">
                         <h1 class="pb-2">Générateur de super-héros</h1>
-                        <button onclick="RandomHero(1, 200)"><i class="fas fa-mask mr-2"></i>Super héro aléatoire</button>
+                        <button onclick="RandomHero(1, 200)" class="animate__animated animate__pulse animate__slower	3s animate__repeat-2"><i class="fas fa-mask mr-2"></i>Super héro aléatoire</button>
                     </div>
                 </div>
             </div>
@@ -30,113 +32,103 @@
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-sm-8 col-md-5 col-lg-2">
-                        <div class="card my-2">
-                            <img class="card-img-top rounded-top img-fluid " src="https://www.superherodb.com/pictures2/portraits/10/100/1390.jpg" alt="ici l'image" style="height: 10rem; width: auto;">
-                                  <h5 class="card-title text-center p-4">Nom du super-hero</h5>
-                                      <div class="container-fluid  bg-dark rounded-bottom text-white">
-                                          <div class="row justify-content-between text-center">
-                                            <div class="col-12 col-md-6 ">
-                                                <p class="mt-2"><i class="fas fa-venus-mars"></i> Genre : ddddd</p>
-                                            </div>
-                                            <div class="col-12 col-md-6 ">
-                                                <p class="mt-2"><i class="fas fa-dna"></i> Race : dddd</p>
-                                                
-                                            </div>
-                                          </div>
-                                          <div class="row justify-content-start text-center">
-                                              <div class="col-12">
-                                                  <p class="mt-2"><i class="fas fa-magic"></i> Powerstats :</p>
-                                                  <ul>
-                                                      <li>1</li>
-                                                      <li>2</li>
-                                                      <li>3</li>
-                                                      <li>4</li>
-                                                  </ul>
-                                              </div>
-                                          </div>
-                                      </div>
+                        <!-- Présentation de l'app -->
+                        <div class="text-center" id="presentAPP">
+                            <h5>Vous pouvez générer des super-héros </h5>
+                            <p>Il vous suffit de cliquer sur le boutton <span class="text-uppercase">Super héro aléatoire</span></p>
+                        </div>
+                        <!-- CardHero -->
+                        <div class="overCard hiddenElem animationCard" id="cardHero">
+                            <div class="card my-2 over" >
+                                <img class="card-img-top rounded-top img-fluid" id="imgHero"src="" alt="photo superhero" style="height: 10rem; width: auto;">
+                                <h5 class="card-title text-center pt-2" id="superHeroName"></h5>
+                                <h6 class="card-title text-center" id="superHeroFullName"> </h6>
+                                <div class="container-fluid  bg-dark rounded-bottom text-white">
+                                    <div class="row justify-content-between text-center">
+                                        <div class="col-12 col-md-6 ">
+                                            <p class="mt-2" ><i class="fas fa-venus-mars"></i> Genre : <span class="text-white" id="superHeroGenre"></span></p>
+                                        </div>
+                                        <div class="col-12 col-md-6 ">
+                                            <p class="mt-2"><i class="fas fa-dna"></i> Race : <span class="text-white" id="superHeroRace"></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-start text-center">
+                                        <div class="col-12">
+                                            <p class="mt-2"><i class="fas fa-balance-scale"></i> Alignement : <span class="text-white" id="superHeroAlign"></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-start text-center">
+                                        <div class="col-12">
+                                            <p class="mt-2"><i class="fas fa-film"></i> First appearance : <span class="text-white" id="superHeroFirst"></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="middle p-2 " id="cardHero">
+                                <h5 class="text-white"> Apppearance :</h5>
+                                <p>Height : <span class="text-white" id="superHeroHeight"></span></p>
+                                <p>Weight : <span class="text-white" id="superHeroWeight"></span></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
         </section>
         <!-- Footer -->
         <div class="container-fluid footer">
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="text-center text-white">
-                        <p class="pt-2">Techniques : Dimitri BONNET - 2020</p>
+                        <p class="pt-2">Dimitri BONNET - 2020</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-        <!-- <div class="container-header text-center ">
-            <div class="header-title">
-                <h1 class="text-white">Générateur de super-héros </h1>
-               
-            </div> 
-        </div> -->
-
-        <!-- <div class="container-main">
-                <div class="container-fluid">
-                    <div class="row justify-content-center">
-                        <div class="col-10 col-md-8 col-lg-4 p-4">
-                            <div class="card">
-                                <img class="card-img-top " src="https://www.superherodb.com/pictures2/portraits/10/100/1390.jpg" alt="ici l'image" style="height: 10rem; width: auto;">
-                                  <h5 class="card-title text-center pt-3">Nom du super-hero</h5>
-                                      <div class="container-fluid  bg-dark rounded text-white">
-                                          <div class="row justify-content-between">
-                                            <div class="col-12 col-md-6">
-                                                <h6 class="mt-2"> <i class="fas fa-venus-mars"></i> Genre : ddddd</h6>
-                                            </div>
-                                            <div class="col-12 col-md-6">
-                                                <h6 class="mt-2"><i class="fas fa-dna"></i> Race : dddd</h6>
-                                                
-                                            </div>
-                                          </div>
-                                          <div class="row justify-content-start">
-                                              <div class="col-12">
-                                                  <h6 class="mt-2"><i class="fas fa-magic"></i> Powerstats :</h6>
-                                                  <ul class="p-3">
-                                                      <li>dddd</li>
-                                                      <li>fff</li>
-                                                      <li>gggg</li>
-                                                      <li>gggg</li>
-                                                  </ul>
-                                              </div>
-                                          </div>
-                                      </div>
-                              </div>
-                        </div>
-                    </div>
-                </div>
-                
-        </div>  -->
-        <!-- <div class="container-footer">
-            <div class="container-fluid">
-                <div class="col-12 text-center text-white pt-1">
-                    TEST TECHNIQUE : Dimitri Bonnet - 2020
-                </div>
-            </div>
-        </div>  -->
-  
+        
     <script>
         function RandomHero(min, max) {
+            /* Faire dissparaitre la presentation de l'app  */
+            document.getElementById("presentAPP").className = "hiddenElem";
+            /* Génére un nombre aléatoir entre 1 et 200 */
             const randomNumber =  Math.floor(Math.random() * (max - min + 1)) + min;
+            /* Je stock le nombre aléatoire */
             const id = randomNumber;
             console.log(id);
+             
+            /* Je récupère le superhero en fonction du nombre aléatoire grâce à l'id */
             const reponse = fetch("https://superheroapi.com/api/2541564006094962/" + id);
             reponse
                 .then(async res =>{
                 try{
                     const hero = await res.json();
                     console.log(hero);
+                    console.log(hero.image.url);
+                    console.log(hero.name);
+                    console.log(hero.appearance.gender);
+                    console.log(hero.appearance.race);
+                    console.log(hero.biography.alignment);
+                    console.log(hero['biography']['full-name']);
+                    console.log(hero['biography']['first-appearance']);
+                    console.log(hero['appearance']['height'][1])
+                    console.log(hero['appearance']['weight'][1])
+                    /* Elem pour ma heroCard */
+                    document.getElementById("imgHero").src = hero.image.url;
+                    document.getElementById("superHeroName").innerHTML = hero.name;
+                    document.getElementById("superHeroFullName").innerHTML = hero['biography']['full-name'];
+                    document.getElementById("superHeroGenre").innerHTML = hero.appearance.gender;
+                    document.getElementById("superHeroRace").innerHTML = hero.appearance.race;
+                    document.getElementById("superHeroAlign").innerHTML = hero.biography.alignment;
+                    document.getElementById('superHeroFirst').innerHTML = hero['biography']['first-appearance'];
+                    /* Elem pour le hover de ma heroCard */
+                    document.getElementById('superHeroHeight').innerHTML = hero['appearance']['height'][1];
+                    document.getElementById('superHeroWeight').innerHTML = hero['appearance']['weight'][1];
+                    /* Faire apparaitre la cardHero lors du clique quand toutes les données sont chargées*/
+                    document.getElementById("cardHero").classList.remove("hiddenElem");
+                    const animationCard = document.querySelector('.animationCard');
+                    animationCard.classList.add('animate__animated', 'animate__bounce'); 
                 } catch(e){
-                    console.log(e)
+                    console.log(e);
                 }
             })
             .catch(err => console.log(err));

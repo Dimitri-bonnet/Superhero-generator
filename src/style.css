@@ -1,14 +1,16 @@
+/* RESET */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* Mon app */
 .myapp{
      min-height: 100vh;
      display: flex;
      flex-direction: column;
  }
- /* HEADER */
+/* HEADER */
 .header{
     min-height: 20VH;
     background: url(./assets/images/wall.jpg)  center/cover;
@@ -27,17 +29,22 @@
     font-size: 1em;   
 }
 .header button:hover {
-    color: rgb(217,87,123);;
+    color: #ff7979;
     background-color: white;
-    border: 2px solid rgb(217,87,123);
+    border: 2px solid #ff7979;
 }
 .header button:focus{
     outline: none;
 }
 
-
-
+/* Presentation app  */
+.hero p {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9em;
+}
 /* Hero card  */
+
 .hero{
     background-attachment:fixed;
     flex: auto;
@@ -45,39 +52,59 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:rgb(203, 220, 228);
+    background: url(./assets/images/comic.jpg) center/cover;
 }
 .card{
     box-shadow:3px 4px 6px 0 rgba(60, 64, 67, 0.3);
 }
-.hero p {
+.hiddenElem{
+    display: none;
+}
+
+.hero .card p {
     font-family: 'Orbitron', sans-serif;
-    font-size: 0.7em;
+    font-size: 0.9em;
+    color: #ff7979;
 }
 .hero h5{
     font-family: 'Bangers', cursive;
+    color:#ff7979;
+    font-size: 2em;
 }
 .hero ul {
     list-style: none;
 }
+/* Over cardHero */
+.overCard {
+    position: relative;
+    background-color: rgb(63, 62, 62);
+  }
 
+.over{
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;  
+}
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .overCard:hover .over {
+    opacity: 0.2;
+  }
+  .overCard:hover .middle {
+    opacity: 1;
+  }
 /* Footer */
 .footer{
     min-height: 5vh;
     background-color:  rgb(217,87,123);
-}
-
-
-.container-main h5{
-    font-family: 'Bangers', cursive;
-}
-.container-main p{
-    font-family: 'Orbitron', sans-serif;
-} */
-
-/* FOOTER */
-
-.container-footer{
-    min-height: 5vh;
-    background-color:rgb(217,87,123);
 }
