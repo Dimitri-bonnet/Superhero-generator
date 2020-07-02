@@ -1,7 +1,7 @@
 # TechniqueDeclique
 git clone https://github.com/Dimitri-bonnet/TechniqueDeclique.git
 
-CD TECHNIQUEDECLIQUE
+CD TechniqueDeclique
 NPM I 
 NPM RUN WEBPACK
 NPM RUN START
