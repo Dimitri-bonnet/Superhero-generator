@@ -102,7 +102,7 @@
                 .then(async res =>{
                 try{
                     const hero = await res.json();
-                    console.log(hero);
+                   /*  console.log(hero);
                     console.log(hero.image.url);
                     console.log(hero.name);
                     console.log(hero.appearance.gender);
@@ -111,7 +111,7 @@
                     console.log(hero['biography']['full-name']);
                     console.log(hero['biography']['first-appearance']);
                     console.log(hero['appearance']['height'][1])
-                    console.log(hero['appearance']['weight'][1])
+                    console.log(hero['appearance']['weight'][1]) */
                     /* Elem pour ma heroCard */
                     document.getElementById("imgHero").src = hero.image.url;
                     document.getElementById("superHeroName").innerHTML = hero.name;
@@ -125,8 +125,13 @@
                     document.getElementById('superHeroWeight').innerHTML = hero['appearance']['weight'][1];
                     /* Faire apparaitre la cardHero lors du clique quand toutes les données sont chargées*/
                     document.getElementById("cardHero").classList.remove("hiddenElem");
+                    /* Animation de ma Card */
                     const animationCard = document.querySelector('.animationCard');
-                    animationCard.classList.add('animate__animated', 'animate__bounce'); 
+                    animationCard.classList.add('animate__animated', 'animate__flip');
+                    animationCard.addEventListener('animationend', () => {
+                        /* console.log('animend') */
+                        animationCard.classList.remove('animate__flip')
+                    });  
                 } catch(e){
                     console.log(e);
                 }

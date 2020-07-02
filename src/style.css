@@ -97,8 +97,11 @@
     height: auto;
     text-align: center;
   }
+.middle p {
+    color: #ff7979;
+}
   .overCard:hover .over {
-    opacity: 0.2;
+    opacity: 0.1;
   }
   .overCard:hover .middle {
     opacity: 1;
