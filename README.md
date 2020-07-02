@@ -1,7 +1,7 @@
 # TechniqueDeclique
-git clone https://github.com/Dimitri-bonnet/Random-Super-hero.git
+git clone https://github.com/Dimitri-bonnet/TechniqueDeclique.git
 
-CD RANDOM-SUPER-HERO
+CD TechniqueDeclique
 NPM I 
 NPM RUN WEBPACK
 NPM RUN START
