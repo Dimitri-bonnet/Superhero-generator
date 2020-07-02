@@ -39,7 +39,7 @@
 
 /* Presentation app  */
 .hero p {
-    color: white;
+    
     font-family: 'Orbitron', sans-serif;
     font-size: 0.9em;
 }
@@ -52,7 +52,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url(./assets/images/comic.jpg) center/cover;
+    background: white;
 }
 .card{
     box-shadow:3px 4px 6px 0 rgba(60, 64, 67, 0.3);
@@ -78,6 +78,7 @@
 .overCard {
     position: relative;
     background-color: rgb(63, 62, 62);
+    border-radius: 6px;
   }
 
 .over{

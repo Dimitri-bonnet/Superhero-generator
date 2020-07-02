@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
     <!-- CSS BOOSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <title>Test Declique</title>
+    <title>Random super-héro</title>
 </head>
 <body>
     <div class="myapp">
@@ -94,7 +94,7 @@
             const randomNumber =  Math.floor(Math.random() * (max - min + 1)) + min;
             /* Je stock le nombre aléatoire */
             const id = randomNumber;
-            console.log(id);
+            /* console.log(id); */
              
             /* Je récupère le superhero en fonction du nombre aléatoire grâce à l'id */
             const reponse = fetch("https://superheroapi.com/api/2541564006094962/" + id);
