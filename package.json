@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "babel.config.js",
-  "dependencies": {},
+  "dependencies": {
+    "jasmine": "^3.5.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.10.3",
     "@babel/core": "^7.10.3",
@@ -23,6 +25,7 @@
   },
   "scripts": {
     "webpack": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "test": "jasmine"
   }
 }
