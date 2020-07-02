@@ -22,7 +22,7 @@
                 <div class="col-12">
                     <div class=" py-5 text-center text-white">
                         <h1 class="pb-2">Générateur de super-héros</h1>
-                        <button onclick="RandomHero(1, 200)" class="animate__animated animate__pulse animate__slower	3s animate__repeat-2"><i class="fas fa-mask mr-2"></i>Super héro aléatoire</button>
+                        <button onclick="RandomHero(1, 300)" class="animationButton animate__animated"><i class="fas fa-mask mr-2"></i>Super héro aléatoire</button>
                     </div>
                 </div>
             </div>
@@ -88,13 +88,14 @@
         
     <script>
         function RandomHero(min, max) {
+              
             /* Faire dissparaitre la presentation de l'app  */
             document.getElementById("presentAPP").className = "hiddenElem";
             /* Génére un nombre aléatoir entre 1 et 200 */
             const randomNumber =  Math.floor(Math.random() * (max - min + 1)) + min;
             /* Je stock le nombre aléatoire */
             const id = randomNumber;
-            /* console.log(id); */
+            console.log(id); 
              
             /* Je récupère le superhero en fonction du nombre aléatoire grâce à l'id */
             const reponse = fetch("https://superheroapi.com/api/2541564006094962/" + id);
@@ -131,7 +132,14 @@
                     animationCard.addEventListener('animationend', () => {
                         /* console.log('animend') */
                         animationCard.classList.remove('animate__flip')
-                    });  
+                    }); 
+                  /* Animation boutton*/
+                    const animationButton = document.querySelector('.animationButton');
+                    animationButton.classList.add('animate__animated', 'animate__shakeY','animate__delay-3s', 'animate__repeat-2');
+                    animationButton.addEventListener('animationend', () => {
+                        /* console.log('animend') */
+                            animationButton.classList.remove('animate__animated','animate__shakeY')
+                        });
                 } catch(e){
                     console.log(e);
                 }
