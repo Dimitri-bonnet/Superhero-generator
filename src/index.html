@@ -88,7 +88,6 @@
         
     <script>
         function RandomHero(min, max) {
-              
             /* Faire dissparaitre la presentation de l'app  */
             document.getElementById("presentAPP").className = "hiddenElem";
             /* Génére un nombre aléatoir entre 1 et 200 */
@@ -96,7 +95,6 @@
             /* Je stock le nombre aléatoire */
             const id = randomNumber;
             console.log(id); 
-             
             /* Je récupère le superhero en fonction du nombre aléatoire grâce à l'id */
             const reponse = fetch("https://superheroapi.com/api/2541564006094962/" + id);
             reponse
