@@ -6,5 +6,5 @@ NPM I
 NPM RUN WEBPACK
 NPM RUN START
 
-NEED CORS IN YOUR BROWSER
+NEED CORS IN YOUR BROWSER (https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=fr)
 Acces-control-allow-orgiin : ON
