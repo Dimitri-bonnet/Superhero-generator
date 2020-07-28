@@ -4,7 +4,7 @@ git clone https://github.com/Dimitri-bonnet/Superhero-generator.git
 
 cd Superhero-generator
 
-npm 1
+npm i
 
 npm run start (http://localhost:4000/)
 
