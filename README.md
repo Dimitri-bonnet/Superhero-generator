@@ -4,11 +4,9 @@ git clone https://github.com/Dimitri-bonnet/Superhero-generator.git
 
 cd Superhero-generator
 
-NPM I 
+npm 1
 
-NPM RUN WEBPACK
-
-NPM RUN START
+npm run start (http://localhost:4000/)
 
 NEED CORS IN YOUR BROWSER (https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf)
 Acces-control-allow-orgiin : ON
