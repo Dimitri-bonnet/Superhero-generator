@@ -2,7 +2,7 @@
 
 git clone https://github.com/Dimitri-bonnet/Superhero-generator.git
 
-CD TechniqueDeclique
+cd Superhero-generator
 
 NPM I 
 
