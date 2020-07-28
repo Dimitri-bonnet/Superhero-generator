@@ -1,4 +1,5 @@
-# TechniqueDeclique
+# Superhero-generator
+
 git clone https://github.com/Dimitri-bonnet/TechniqueDeclique.git
 
 CD TechniqueDeclique
