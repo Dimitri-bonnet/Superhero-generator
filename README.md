@@ -1,6 +1,6 @@
 # Superhero-generator
 
-git clone https://github.com/Dimitri-bonnet/TechniqueDeclique.git
+git clone https://github.com/Dimitri-bonnet/Superhero-generator.git
 
 CD TechniqueDeclique
 
